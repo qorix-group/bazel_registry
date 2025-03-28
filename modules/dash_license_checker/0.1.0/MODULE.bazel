@@ -20,7 +20,6 @@ module(
 # dependency on rules_java.
 bazel_dep(name = "rules_java", version = "8.6.3")
 
-
 http_jar = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_jar")
 
 DASH_VERSION = "1.1.0"
