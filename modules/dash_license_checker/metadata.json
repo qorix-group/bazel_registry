@@ -5,14 +5,18 @@
             "name": "Nikola Radakovic",
             "email": "nikola.ra.radakovic@bmw.de",
             "github": "nradakovic"
-        }
+        },
+        {
+            "name": "Dan Calavrezo",
+            "email": "danc_ext@qorix.ai",
+            "github": "dcalavrezo-qorix"
+        }        
     ],
     "repository": [
         "github:eclipse-score/tooling"
     ],
     "versions": [
-        "0.2.0",
-        "0.2.1"
+        "0.1.0"
     ],
     "yanked_versions": {}
 }
