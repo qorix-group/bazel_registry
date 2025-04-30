@@ -1,5 +1,5 @@
 {
-    "homepage": "https://github.com/eclipse-score/toolchain_gcc",
+    "homepage": "https://github.com/eclipse-score/toolchains_gcc",
     "maintainers": [
         {
             "name": "Nikola Radakovic",
@@ -15,10 +15,11 @@
         }
     ],
     "repository": [
-        "github:eclipse-score/toolchain_gcc"
+        "github:eclipse-score/toolchains_gcc"
     ],
     "versions": [
-        "0.1"
+        "0.1",
+        "0.2"
     ],
     "yanked_versions": {}
 }
