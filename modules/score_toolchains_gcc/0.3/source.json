@@ -1,0 +1,5 @@
+{
+    "integrity": "sha256-hNpZHLGR+VyYkdw+P/mFKDoxoEM4z0z/O8fSH3mzpcs=",
+    "strip_prefix": "toolchains_gcc-0.0.4/",
+    "url": "https://github.com/eclipse-score/toolchains_gcc/archive/refs/tags/0.0.4.tar.gz"
+}
