@@ -4,16 +4,37 @@ on:
     types: [opened, reopened, synchronize]
 
 jobs:
-  verify:
+  verify_registry:
+    name: 🧪 Verify Registry
     runs-on: ubuntu-latest
-    name: "🔍 Verify Registry"
     steps:
-      - name: "🔄 Check out"
+      - name: 📥 Check out
         uses: actions/checkout@v4
-      - name: 📦 Setup Bazel
+
+      - name: 🛠️ Setup Bazel
         uses: bazel-contrib/setup-bazel@0.9.1
-      - name: Run verification script
+
+      - name: 🔄 Cross-Check SemVer with compatibility_level
+        run: |
+          pip install -r tools/requirements.txt
+          python tools/verify_semver_compatibility_level.py
+
+      - name: 📋 Run verification script
         run: bazel run //tools:verify_modules
+
+
+  self_test:
+    name: 🔬 Self Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📤 Check out
+        uses: actions/checkout@v4
+
+      - name: 🧩 Run pytest
+        run: |
+          pip install -r tools/requirements.txt
+          pytest tools
+
 
   copyright-check:
     uses: eclipse-score/cicd-workflows/.github/workflows/copyright.yml@main
