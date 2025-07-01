@@ -19,3 +19,8 @@ bazel run //tools:license.check.license_check
 # Verify copyright:
 bazel run //tools:copyright.check
 ```
+## Release automation
+
+The release automation workflow will run 2 times a day once in 12 AM and once in 12 PM.
+
+In case an urgent release of a module is needed, run the  ```check_new_releases``` workflow manually.
