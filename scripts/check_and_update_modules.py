@@ -97,7 +97,7 @@ def enrich_modules(modules_list, actual_versions_dict, github_token="", max_rele
             if release["prerelease"]:
                 if not re.search(r"\d+\.\d+\.\d+-[A-Za-z]+", release["tag_name"]):
                     print(
-                        f"⚠️ Skipping pre-release '{release['tag_name']}' for {module_name}: "
+                        f"Skipping pre-release '{release['tag_name']}' for {module_name}: "
                         "Pre-release version must include a suffix (e.g., -alpha, -rc)."
                     )
                     continue
@@ -121,17 +121,17 @@ def process_module(module):
     bazel_file_url = module["module_file_url"].replace("https://github.com", "https://raw.githubusercontent.com").replace("blob", "refs/tags")
     r = requests.get(bazel_file_url)
     if not r.ok:
-        print(f"Failed to fetch MODULE.bazel for {module['module_name']}")
+        print(f"Failed to fetch MODULE.bazel for {module['module_name']}@{module['module_version']}")
         return
 
     bazel_content = r.text
     declared_version = extract_module_version(bazel_content)
-   
-    if declared_version !=  module["module_version"]:
-        raise ValueError(
-            f"Version mismatch in {module['module_name']}: "
-            f"GitHub release is {module['module_version']} but MODULE.bazel has {declared_version}"
-        )
+
+    if declared_version != module["module_version"]:
+        print(
+            f"Skipping {module['module_name']}@{module['module_version']}: "
+            f"Version mismatch (expected {module['module_version']}, declared {declared_version})"        )
+        return
 
     generate_needed_files(
         module_name=module["module_name"],
