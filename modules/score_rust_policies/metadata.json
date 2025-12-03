@@ -1,0 +1,18 @@
+{
+    "homepage": "https://github.com/eclipse-score/score_rust_policies",
+    "maintainers": [
+        {
+            "name": "Dan Calavrezo",
+            "email": "danc_ext@qorix.ai",
+            "github": "dcalavrezo-qorix",
+            "github_user_id": 195309321
+        }
+    ],
+    "repository": [
+        "github:eclipse-score/score_rust_policies"
+    ],
+    "versions": [
+        "0.0.1"
+    ],
+    "yanked_versions": {}
+}
