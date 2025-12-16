@@ -49,12 +49,6 @@ bazel_dep(name = "score_test_scenarios", version = "0.3.1", dev_dependency = Tru
 
 # Overrides
 git_override(
-    module_name = "score_test_scenarios",
-    commit = "2367017e92a65cf4dd2cebeee6d6db3b4d6a1447",
-    remote = "https://github.com/qorix-group/testing_tools.git",
-)
-
-git_override(
     module_name = "score_virtualization",
     commit = "99d3f153c43796b67a63e82aad1ede6a881aa6af",
     remote = "https://github.com/qorix-group/score_virtualization.git",
