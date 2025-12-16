@@ -54,5 +54,9 @@
   {
     "module_name": "score_bazel_platforms",
     "module_url": "https://github.com/eclipse-score/bazel_platforms"
+  },
+  {
+    "module_name": "score_kyron",
+    "module_url": "https://github.com/eclipse-score/kyron"
   }
 ]
