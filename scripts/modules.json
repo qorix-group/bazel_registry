@@ -24,6 +24,10 @@
     "module_url": "https://github.com/eclipse-score/toolchains_qnx"
   },
   {
+    "module_name": "score_toolchains_rust",
+    "module_url": "https://github.com/eclipse-score/toolchains_rust"
+  },
+  {
     "module_name": "score_tooling",
     "module_url": "https://github.com/eclipse-score/tooling"
   },
