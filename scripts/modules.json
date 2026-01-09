@@ -66,5 +66,9 @@
   {
     "module_name": "score_kyron",
     "module_url": "https://github.com/eclipse-score/kyron"
+  },
+  {
+    "module_name": "score_baselibs_rust",
+    "module_url": "https://github.com/eclipse-score/baselibs_rust"
   }
 ]
