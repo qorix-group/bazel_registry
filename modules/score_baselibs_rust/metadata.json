@@ -1,0 +1,19 @@
+{
+    "homepage": "https://github.com/eclipse-score/baselibs_rust",
+    "periodic-pull": true,
+    "maintainers": [
+        {
+            "name": "Pawel Rutka",
+            "email": "Pawel.Rutka.ext@qorix.ai",
+            "github": "pawelrutkaq",
+            "github_user_id": 195489054
+        }
+    ],
+    "repository": [
+        "github:eclipse-score/baselibs_rust"
+    ],
+    "versions": [
+        "0.0.1"
+    ],
+    "yanked_versions": {}
+}
