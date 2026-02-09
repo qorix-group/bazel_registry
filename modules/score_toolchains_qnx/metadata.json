@@ -1,5 +1,6 @@
 {
     "homepage": "https://github.com/eclipse-score/toolchains_qnx",
+    "periodic-pull": true,
     "maintainers": [
         {
             "name": "Nikola Radakovic",
