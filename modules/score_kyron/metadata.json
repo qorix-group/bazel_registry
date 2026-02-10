@@ -1,5 +1,6 @@
 {
     "homepage": "https://github.com/eclipse-score/kyron",
+    "periodic_pull": true,
     "maintainers": [
         {
             "name": "Pawel Rutka",
