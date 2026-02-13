@@ -16,5 +16,7 @@
         "1.0.1",
         "1.0.0"
     ],
-    "yanked_versions": {}
+    "yanked_versions": {
+        "1.1.1": "tooling 1.1.1 has been yanked due to a broken dependency. Please upgrade to 1.1.2 and also upgrade Docs-As-Code to 3.0.1 if in use."
+    }
 }
