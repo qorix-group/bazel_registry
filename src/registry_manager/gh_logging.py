@@ -32,15 +32,15 @@ class Logger:
     def clear(self) -> None:
         self.warnings.clear()
 
-    def _loc(self, file: Path | None, line: int | None) -> str:
+    def _loc(self, file: Path | None, line: int | None, for_github: bool) -> str:
         if file and file.is_absolute():
             file = file.relative_to(GIT_ROOT)
 
-        if is_running_in_github_actions():
+        if for_github:
             if file and line:
-                return f"file={file},line={line}"
+                return f" file={file},line={line}"
             if file:
-                return f"file={file}"
+                return f" file={file}"
             return ""
 
         if file and line:
@@ -52,26 +52,14 @@ class Logger:
     def _print(
         self, prefix: str, msg: str, file: Path | None = None, line: int | None = None
     ) -> None:
-        location = self._loc(file, line)
-        if is_running_in_github_actions():
-            github_prefix = {
-                "debug": "debug",
-                "info": "notice",
-                "warning": "warning",
-                "error": "error",
-                "success": "notice",
-            }
-            print(f"::{github_prefix.get(prefix, prefix)}{location}::{self.name} {msg}")
-            return
+        github_announcements = {"notice", "warning", "error"}
 
-        pretty_prefix = {
-            "debug": "DEBUG",
-            "info": "INFO",
-            "warning": "WARNING",
-            "error": "ERROR",
-            "success": "SUCCESS",
-        }
-        print(f"{pretty_prefix.get(prefix, prefix)}:{location} {self.name} {msg}")
+        if is_running_in_github_actions() and prefix in github_announcements:
+            location = self._loc(file, line, for_github=True)
+            print(f"::{prefix}{location}::{self.name} {msg}")
+        else:
+            location = self._loc(file, line, for_github=False)
+            print(f"{prefix.upper()}:{location} {self.name} {msg}")
 
     def debug(self, msg: str) -> None:
         self._print("debug", msg)
@@ -79,8 +67,8 @@ class Logger:
     def info(self, msg: str) -> None:
         self._print("info", msg)
 
-    def ok(self, msg: str) -> None:
-        self._print("success", msg)
+    def notice(self, msg: str) -> None:
+        self._print("notice", msg)
 
     def warning(
         self, msg: str, file: Path | None = None, line: int | None = None
