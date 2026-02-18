@@ -1,0 +1,25 @@
+{
+    "homepage": "https://github.com/eclipse-score/rules_rust",
+    "periodic-pull": true,
+    "maintainers": [
+        {
+            "name": "Dan Calavrezo",
+            "email": "danc_ext@qorix.ai",
+            "github": "dcalavrezo-qorix",
+            "github_user_id": 195309321
+        },
+        {
+            "name": "Pawel Rutka",
+            "email": "Pawel.Rutka.ext@qorix.ai",
+            "github": "pawelrutkaq",
+            "github_user_id": 195489054
+        }
+    ],
+    "repository": [
+        "github:eclipse-score/rules_rust"
+    ],
+    "versions": [
+        "0.68.1-score"
+    ],
+    "yanked_versions": {}
+}
