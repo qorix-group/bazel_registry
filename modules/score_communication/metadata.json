@@ -1,5 +1,6 @@
 {
     "homepage": "https://github.com/eclipse-score/communication",
+    "periodic-pull": true,
     "maintainers": [
         {
             "name": "Ulrich Huber",
