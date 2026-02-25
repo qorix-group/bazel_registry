@@ -243,5 +243,9 @@ def main(args: list[str]) -> None:
         log.fatal(f"Completed with {len(log.warnings)} warnings.")
 
 
-if __name__ == "__main__":
+def cli() -> None:
     main(args=sys.argv[1:])
+
+
+if __name__ == "__main__":
+    cli()
