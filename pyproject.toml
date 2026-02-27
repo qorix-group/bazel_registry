@@ -26,8 +26,7 @@ dev = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["registry_manager"]
-root = "src"
+packages = ["src/registry_manager"]
 
 [tool.uv]
 package = true
