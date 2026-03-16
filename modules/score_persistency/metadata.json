@@ -1,6 +1,20 @@
 {
     "homepage": "https://github.com/eclipse-score/persistency",
     "periodic-pull": true,
+    "maintainers": [
+        {
+            "name": "VinodReddy GopiReddy",
+            "email": "VinodReddy.GopiReddy@qorix.ai",
+            "github": "vinodreddy-g",
+            "github_user_id": 57339779
+        },
+        {
+            "name": "Arkadiusz Jedrzejewski",
+            "email": "arkadiusz.jedrzejewski.ext@qorix.ai",
+            "github": "arkjedrz",
+            "github_user_id": 32277297
+        }
+    ],
     "repository": [
         "github:eclipse-score/persistency"
     ],

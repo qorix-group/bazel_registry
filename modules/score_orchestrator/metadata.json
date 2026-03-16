@@ -1,6 +1,20 @@
 {
     "homepage": "https://github.com/eclipse-score/orchestrator",
     "periodic-pull": true,
+    "maintainers": [
+        {
+            "name": "VinodReddy GopiReddy",
+            "email": "VinodReddy.GopiReddy@qorix.ai",
+            "github": "vinodreddy-g",
+            "github_user_id": 57339779
+        },
+        {
+            "name": "Volker Haussler",
+            "email": "volker.haeussler@qorix.ai",
+            "github": "PandaeDo",
+            "github_user_id": 193153210
+        }
+    ],
     "repository": [
         "github:eclipse-score/orchestrator"
     ],
